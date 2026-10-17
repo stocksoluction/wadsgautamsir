@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Trade With Gautam - Stock Market & Trading Community</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '1406843388024084');
+  fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img
+      height="1"
+      width="1"
+      style="display:none"
+      src="https://www.facebook.com/tr?id=1406843388024084&ev=PageView&noscript=1"
+    />
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #0d0e12;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 15px;
+    }
+
+    .card-container {
+      width: 100%;
+      max-width: 400px;
+      background: #12141a;
+      border-radius: 24px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo-wrapper {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      border: 3px solid #ffcc00;
+      box-shadow: 0 0 30px #ffcc00;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      color: #ffcc00;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .main-subtitle {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .tagline {
+      color: #00a2ff;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .timer-box {
+      color: #ffcc00;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      padding: 7px 14px;
+      border-radius: 20px;
+      background: rgba(255, 204, 0, 0.08);
+      border: 1px solid rgba(255, 204, 0, 0.25);
+    }
+
+    #countdown {
+      font-size: 16px;
+      color: #ffffff;
+    }
+
+    .btn-join {
+      width: 100%;
+      background: linear-gradient(
+        180deg,
+        #00a2ff 0%,
+        #0072ff 100%
+      );
+      color: #ffffff;
+      text-decoration: none;
+      padding: 14px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
+      margin-bottom: 15px;
+      animation: gentleMove 1.8s ease-in-out infinite;
+    }
+
+    @keyframes gentleMove {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .btn-trusted {
+      width: 100%;
+      background: #ffffff;
+      color: #0d0e12;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 25px;
+    }
+
+    .features-list {
+      list-style: none;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .features-list li {
+      font-size: 14px;
+      margin-bottom: 12px;
+      color: #e0e0e0;
+      font-weight: 500;
+    }
+
+    .managed-by-btn {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .managed-by-btn a {
+      display: block;
+      width: 100%;
+      padding: 12px 0;
+      background-color: rgba(255, 255, 255, 0.03);
+      border: 1px solid #2a2e3d;
+      border-radius: 12px;
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .managed-by-btn span {
+      color: #00a2ff;
+    }
+
+    .disclaimer {
+      font-size: 10px;
+      color: #777777;
+      line-height: 1.4;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card-container">
+
+    <!-- Logo -->
+    <div class="logo-wrapper">
+      <div class="logo">
+        <img
+          src="logo2.png"
+          alt="Trade With Gautam Logo"
+        >
+      </div>
+    </div>
+
+    <!-- Title -->
+    <h1>
+      Trade With Gautam
+    </h1>
+
+    <div class="main-subtitle">
+      📊 Stock Market & Option Trading Community 📈
+    </div>
+
+    <div class="tagline">
+      LEARN • ANALYZE • GROW
+    </div>
+
+    <!-- 30 Second Timer -->
+    <div class="timer-box">
+      ⏳ Join करने के लिए
+      <span id="countdown">30</span>
+      सेकंड
+    </div>
+
+    <!-- Telegram Join Button -->
+    <a
+      href="https://t.me/+YEZ918--hmlmYzM1"
+      class="btn-join tg-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      🚀 Join Free Telegram Channel
+    </a>
+
+    <!-- Second Telegram Button -->
+    <a
+      href="https://t.me/+YEZ918--hmlmYzM1"
+      class="btn-trusted tg-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      🇮🇳 India's Trusted Trading Community
+    </a>
+
+    <!-- Highlights -->
+    <ul class="features-list">
+
+      <li>
+        ✔ Daily Market Analysis & Nifty/BankNifty Updates
+      </li>
+
+      <li>
+        ✔ Price Action & Chart Patterns Education
+      </li>
+
+      <li>
+        ✔ Proper Risk Management Strategies
+      </li>
+
+      <li>
+        ✔ ⭐ 10,000+ Active Traders Learning Together
+      </li>
+
+      <li>
+        ✔ Suitable for Beginners & Advanced Traders
+      </li>
+
+    </ul>
+
+    <!-- Managed By -->
+    <div class="managed-by-btn">
+      <a
+        href="https://t.me/+7kAzDLemix01ZWI9"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🔥 Managed By
+        <span>Meta Growtha Agency</span>
+      </a>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+
+      <strong>Disclaimer:</strong>
+
+      This channel is for educational purposes only.
+      Stock market trading involves financial risk.
+      We do not offer guaranteed returns or SEBI
+      registered advisory services.
+
+      Please consult your financial advisor before
+      making any investment decision.
+
+    </div>
+
+  </div>
+
+  <!-- Timer + Subscribe Event -->
+  <script>
+
+    /* 30 Second Countdown */
+
+    let timeLeft = 30;
+
+    const countdown =
+      document.getElementById("countdown");
+
+    const timer =
+      setInterval(function () {
+
+        timeLeft--;
+
+        countdown.textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+
+          clearInterval(timer);
+
+          countdown.textContent = "0";
+
+        }
+
+      }, 1000);
+
+
+    /* Telegram Subscribe Event */
+
+    document
+      .querySelectorAll(".tg-link")
+      .forEach(function(button) {
+
+        button.addEventListener("click", function() {
+
+          if (typeof fbq === "function") {
+
+            fbq("track", "Subscribe");
+
+          }
+
+        });
+
+      });
+
+  </script>
+
+</body>
+</html>
